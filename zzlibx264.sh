@@ -26,7 +26,7 @@ cd src/$NAME
 
 export PKG_CONFIG_PATH="$ROOTDIR/lib/pkgconfig:$ROOTDIR/share/pkgconfig:"$PKG_CONFIG_PATH
 
-./configure --prefix="$ROOTDIR" --enable-shared
+./configure --prefix="$ROOTDIR" --enable-shared --disable-asm
 make -j"$(nproc)" && make install
 
 echo $NAME installed on "$ROOTDIR"
