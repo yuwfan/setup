@@ -19,7 +19,7 @@ if [ -f "downloads/$FILE1" ]; then
     echo "downloads/$FILE1 exist"
 else
     echo "$FILE1 does not exist, downloading from $DOWNLOADURL1"
-    wget $DOWNLOADURL1 -O $FILE1
+    wget $DOWNLOADURL1 --no-check-certificate -O $FILE1
     mv $FILE1 downloads/
 fi
 
